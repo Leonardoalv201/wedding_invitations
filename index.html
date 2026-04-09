@@ -3,7 +3,7 @@
 <head>
     <meta property="og:title" content="Boda de Alejandra & Leonardo">
     <meta property="og:description" content="¡Acompáñanos a celebrar nuestra unión civil! 06.06.2026">
-    <meta property="og:image" content="https://github.com/Leonardoalv201/wedding_invitations/blob/main/Pena_de_Bernal.jpg">
+    <meta property="og:image" content="https://raw.githubusercontent.com/Leonardoalv201/wedding_invitations/main/Pena_de_Bernal.jpg">
     <meta property="og:url" content="https://leonardoalv201.github.io/wedding_invitations/">
     
     <meta charset="UTF-8">
@@ -71,6 +71,7 @@
             text-align: center;
         }
 
+        /* --- NUEVO ESTILO DE ITINERARIO RESPONSIVO --- */
         .itinerary-card {
             background: white;
             padding: 25px;
@@ -79,21 +80,51 @@
             margin-top: 20px;
         }
 
-        table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-
-        td {
-            padding: 15px 10px;
+        .itinerary-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
             border-bottom: 1px solid #f9f9f9;
         }
 
-        .time {
+        .itinerary-item:last-child {
+            border-bottom: none;
+        }
+
+        .itinerary-time {
             font-weight: 600;
             color: var(--color-oro);
-            width: 40%;
+            flex: 0 0 130px; /* Ancho fijo para la hora */
+            text-align: left;
+            font-size: 0.95rem;
         }
+
+        .itinerary-desc {
+            flex: 1;
+            text-align: right;
+            font-weight: 400;
+        }
+
+        /* Ajuste para pantallas pequeñas */
+        @media (max-width: 480px) {
+            .itinerary-item {
+                flex-direction: column; /* Apilar hora sobre texto */
+                align-items: center;
+                text-align: center;
+                gap: 5px;
+            }
+            .itinerary-time {
+                flex: none;
+                text-align: center;
+                width: 100%;
+            }
+            .itinerary-desc {
+                text-align: center;
+                width: 100%;
+            }
+        }
+        /* ------------------------------------------- */
 
         .btn {
             display: inline-block;
@@ -123,7 +154,6 @@
             margin-bottom: 10px;
         }
 
-        /* Estilos del sobre CSS */
         .envelope-wrapper {
             position: relative;
             width: 100px;
@@ -214,22 +244,41 @@
         <div class="icon-box">📍</div>
         <h2>Ubicación</h2>
         <p>Camino antiguo a Bernal S/N, 76680 Bernal, Qro.</p>
-        <a href="https://maps.google.com/?q=MontesSuits+Bernal" target="_blank" class="btn btn-outline">Ver en Google Maps</a>
+        <a href="https://maps.app.goo.gl/YourMapLink" target="_blank" class="btn btn-outline">Ver en Google Maps</a>
     </div>
 
     <div class="section" style="background-color: #f4f1ea;">
         <div class="icon-box">⏳</div>
         <h2>Itinerario</h2>
         <div class="itinerary-card">
-            <table>
-                <tr><td class="time">15:30 - 16:00</td><td>Recepción</td></tr>
-                <tr><td class="time">16:00 - 16:30</td><td>Ceremonia Civil</td></tr>
-                <tr><td class="time">16:30 - 17:30</td><td>Sesión de Fotos</td></tr>
-                <tr><td class="time">17:30 - 18:00</td><td>Brindis</td></tr>
-                <tr><td class="time">18:00 - 19:30</td><td>Comida</td></tr>
-                <tr><td class="time">19:30 - 21:30</td><td>Convivencia</td></tr>
-                <tr><td class="time">21:30 - 22:00</td><td>Despedida</td></tr>
-            </table>
+            <div class="itinerary-item">
+                <div class="itinerary-time">15:30 - 16:00</div>
+                <div class="itinerary-desc">Recepción</div>
+            </div>
+            <div class="itinerary-item">
+                <div class="itinerary-time">16:00 - 16:30</div>
+                <div class="itinerary-desc">Ceremonia Civil</div>
+            </div>
+            <div class="itinerary-item">
+                <div class="itinerary-time">16:30 - 17:30</div>
+                <div class="itinerary-desc">Sesión de Fotos</div>
+            </div>
+            <div class="itinerary-item">
+                <div class="itinerary-time">17:30 - 18:00</div>
+                <div class="itinerary-desc">Brindis</div>
+            </div>
+            <div class="itinerary-item">
+                <div class="itinerary-time">18:00 - 19:30</div>
+                <div class="itinerary-desc">Comida</div>
+            </div>
+            <div class="itinerary-item">
+                <div class="itinerary-time">19:30 - 21:30</div>
+                <div class="itinerary-desc">Convivencia</div>
+            </div>
+            <div class="itinerary-item">
+                <div class="itinerary-time">21:30 - 22:00</div>
+                <div class="itinerary-desc">Despedida</div>
+            </div>
         </div>
     </div>
 
