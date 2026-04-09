@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boda Alejandra & Leonardo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --color-oro: #bca371;
+            --color-fondo: #fcfbf8;
+            --color-texto: #4a4a4a;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--color-fondo);
+            color: var(--color-texto);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        /* Ajuste para nombres responsivos */
+        header {
+            padding: 60px 20px;
+            background-color: white;
+            text-align: center;
+            border-bottom: 1px solid #f0eadd;
+        }
+
+        .nombres-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            font-family: 'Great Vibes', cursive;
+            font-size: 4rem;
+            color: var(--color-oro);
+            margin: 0;
+            white-space: nowrap; /* Evita que el nombre se parta solo */
+        }
+
+        .ampersand {
+            font-family: 'Great Vibes', cursive;
+            font-size: 3rem;
+            color: var(--color-oro);
+            padding: 0 10px;
+        }
+
+        h2 {
+            font-family: 'Great Vibes', cursive;
+            font-size: 2.5rem;
+            color: var(--color-oro);
+        }
+
+        .section {
+            padding: 50px 20px;
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .itinerary-card {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            margin-top: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        td {
+            padding: 15px 10px;
+            border-bottom: 1px solid #f9f9f9;
+        }
+
+        .time {
+            font-weight: 600;
+            color: var(--color-oro);
+            width: 40%;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 15px 30px;
+            margin: 10px;
+            background-color: var(--color-oro);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: transform 0.2s, background 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #a38b5d;
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid var(--color-oro);
+            color: var(--color-oro);
+        }
+
+        .icon-box {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        /* Media query para asegurar el orden en pantallas pequeñas */
+        @media (max-width: 600px) {
+            .nombres-container {
+                flex-direction: column;
+                gap: 0;
+            }
+            h1 {
+                font-size: 3.5rem;
+            }
+            .ampersand {
+                font-size: 2.5rem;
+                line-height: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="nombres-container">
+            <h1>Alejandra</h1>
+            <span class="ampersand">&</span>
+            <h1>Leonardo</h1>
+        </div>
+        <p style="letter-spacing: 3px; font-weight: 300; margin-top: 15px;">NUESTRA BODA CIVIL</p>
+        <p style="font-size: 1.2rem; margin-top: 20px;">
+            <strong>06 • JUNIO • 2026</strong><br>
+            MontesSuits, Peña de Bernal
+        </p>
+    </header>
+
+    <div class="section">
+        <div class="icon-box">📍</div>
+        <h2>Ubicación</h2>
+        <p>Camino antiguo a Bernal S/N, 76680 Bernal, Qro.</p>
+        <a href="https://www.google.com/maps/search/?api=1&query=MontesSuits+Bernal+Queretaro" target="_blank" class="btn btn-outline">Ver en Google Maps</a>
+    </div>
+
+    <div class="section" style="background-color: #f4f1ea;">
+        <div class="icon-box">⏳</div>
+        <h2>Itinerario</h2>
+        <div class="itinerary-card">
+            <table>
+                <tr><td class="time">15:30 - 16:00</td><td>Recepción</td></tr>
+                <tr><td class="time">16:00 - 16:30</td><td>Ceremonia Civil</td></tr>
+                <tr><td class="time">16:30 - 17:30</td><td>Sesión de Fotos</td></tr>
+                <tr><td class="time">17:30 - 18:00</td><td>Brindis</td></tr>
+                <tr><td class="time">18:00 - 19:30</td><td>Comida</td></tr>
+                <tr><td class="time">19:30 - 21:30</td><td>Convivencia</td></tr>
+                <tr><td class="time">21:30 - 22:00</td><td>Despedida</td></tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="icon-box">👗</div>
+        <h2>Código de Vestimenta</h2>
+        <p style="font-size: 1.3rem; font-weight: 600;">Coctel</p>
+        <p>Queremos que luzcan increíbles y se sientan cómodos para celebrar.</p>
+    </div>
+
+    <div class="section" style="background-color: white; border-radius: 50px 50px 0 0;">
+        <h2>Detalles Adicionales</h2>
+        <p><strong>Mesa de Regalos:</strong></p>
+        <a href="https://www.amazon.com.mx/wedding/guest-view/1G8J5UVXZ45E7" target="_blank" class="btn">Nuestra Selección</a>
+
+        <div style="margin-top: 40px;">
+            <p><strong>Hospedaje (MontesSuits):</strong></p>
+            <p>Reserva al: +52 442 949 1156</p>
+            <a href="tel:+524429491156" class="btn btn-outline">Llamar al Hotel</a>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+    <style>
+        /* Contenedor principal del sobre */
+        .envelope-wrapper {
+            position: relative;
+            width: 100px;
+            height: 65px;
+            background-color: #e0d5ba; /* Color base del sobre */
+            margin: 50px auto 30px auto;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        /* El cuerpo del sobre */
+        .envelope-body {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            background-color: #d4c5a2;
+            z-index: 3;
+            border-radius: 0 0 5px 5px;
+        }
+
+        /* La solapa (triángulo superior) */
+        .envelope-flap {
+            position: absolute;
+            top: 0;
+            left: 0;
+            border-left: 50px solid transparent;
+            border-right: 50px solid transparent;
+            border-top: 35px solid #bca371; /* Color de la solapa */
+            transform-origin: top;
+            transition: transform 0.5s ease-in-out;
+            z-index: 4;
+        }
+
+        /* La cartita que se asoma */
+        .envelope-letter {
+            position: absolute;
+            bottom: 5px;
+            left: 10%;
+            width: 80%;
+            height: 80%;
+            background-color: white;
+            z-index: 2;
+            transition: transform 0.5s ease-in-out;
+            border: 1px solid #eee;
+        }
+
+        /* Efecto al pasar el mouse (HOVER) */
+        .envelope-wrapper:hover .envelope-flap {
+            transform: rotateX(180deg);
+            z-index: 1; /* Pasa atrás de la carta al abrirse */
+        }
+
+        .envelope-wrapper:hover .envelope-letter {
+            transform: translateY(-30px); /* La carta sube un poco */
+        }
+
+        .envelope-wrapper:hover {
+            transform: scale(1.1);
+        }
+    </style>
+
+    <div class="section" style="background-color: #fcfbf8; padding-bottom: 80px;">
+        
+        <div class="envelope-wrapper" onmouseenter="lanzarConfetiElegante(event)">
+            <div class="envelope-flap"></div>
+            <div class="envelope-letter"></div>
+            <div class="envelope-body"></div>
+        </div>
+        
+        <h2>Confirmación</h2>
+        <p>Por favor, confirma tu asistencia antes del 15 de mayo de 2026.</p>
+        
+        <a href="https://wa.me/527352762202?text=¡Hola! Confirmo mi asistencia para la boda de Alejandra y Leonardo." 
+        class="btn" 
+        style="background-color: #63b380; border: none;">
+        Confirmar por WhatsApp
+        </a>
+    </div>
+
+    <script>
+        function lanzarConfetiElegante(event) {
+            const rect = event.currentTarget.getBoundingClientRect();
+            const x = (rect.left + rect.width / 2) / window.innerWidth;
+            const y = (rect.top + rect.height / 2) / window.innerHeight;
+
+            // Retrasamos un poquito el confeti para que coincida con la apertura
+            setTimeout(() => {
+                confetti({
+                    particleCount: 60,
+                    spread: 80,
+                    origin: { x: x, y: y },
+                    colors: ['#bca371', '#ffffff', '#63b380'],
+                    ticks: 300,
+                    gravity: 0.8,
+                    scalar: 0.9
+                });
+            }, 300); // 300ms de retraso
+        }
+    </script>
+
+    <footer style="padding: 40px 20px; background: #fff; font-size: 0.9rem; color: #aaa; text-align: center; border-top: 1px solid #f0eadd;">
+        <div style="height: 1px; width: 40px; background: var(--color-oro); margin: 0 auto 15px auto;"></div>
+        <p>Esperamos compartir este día tan especial con ustedes.</p>
+    </footer>
+
+</body>
+</html>
